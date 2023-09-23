@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "start-storybook -p 6006",
-    "build": "build-storybook"
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && build-storybook"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,11 @@
     "vite": "^3.1.4"
   },
   "dependencies": {
+    "@ignite-ui/eslint-config": "*",
+    "@ignite-ui/react": "*",
+    "@ignite-ui/tokens": "*",
+    "@ignite-ui/ts-config": "*",
+    "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
